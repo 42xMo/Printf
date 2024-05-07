@@ -6,7 +6,7 @@
 #    By: mabdessm <mabdessm@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/06 12:50:33 by mabdessm          #+#    #+#              #
-#    Updated: 2024/05/07 13:41:22 by mabdessm         ###   ########.fr        #
+#    Updated: 2024/05/07 18:11:52 by mabdessm         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME = libftprintf.a
 CC = cc
 FLAGS = -Wall -Werror -Wextra -I ./
 RM = rm -f
-SRCS =	
+SRCS =	ft_printf.c ft_strlen.c ft_putchar.c ft_putstr.c\
+		 ft_putnbr.c ft_putunsigned.c ft_putnbr_base.c
 
 OBJS = $(SRCS:.c=.o)
 

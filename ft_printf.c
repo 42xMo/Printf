@@ -6,11 +6,11 @@
 /*   By: mabdessm <mabdessm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 13:44:34 by mabdessm          #+#    #+#             */
-/*   Updated: 2024/05/07 17:40:05 by mabdessm         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:46:31 by mabdessm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printf(const char *str, ...)
 {

@@ -6,11 +6,11 @@
 /*   By: mabdessm <mabdessm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 13:28:38 by mabdessm          #+#    #+#             */
-/*   Updated: 2024/05/07 16:35:55 by mabdessm         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:46:45 by mabdessm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putnbr(int n)
 {
