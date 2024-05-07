@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabdessm <mabdessm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/06 19:01:12 by mabdessm          #+#    #+#             */
-/*   Updated: 2024/05/07 16:36:41 by mabdessm         ###   ########.fr       */
+/*   Created: 2024/05/07 13:39:25 by mabdessm          #+#    #+#             */
+/*   Updated: 2024/05/07 13:40:33 by mabdessm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_putstr(char *str)
+int	ft_strlen(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (str[i])
-	{
-		ft_putchar(str[i]);
+	while (i[str])
 		++i;
-	}
 	return (i);
 }

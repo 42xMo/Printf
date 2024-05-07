@@ -6,13 +6,14 @@
 /*   By: mabdessm <mabdessm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 17:21:26 by mabdessm          #+#    #+#             */
-/*   Updated: 2024/05/06 17:22:24 by mabdessm         ###   ########.fr       */
+/*   Updated: 2024/05/07 17:34:56 by mabdessm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_putchar(char c)
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
+	return (1);
 }
