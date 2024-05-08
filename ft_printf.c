@@ -6,11 +6,23 @@
 /*   By: mabdessm <mabdessm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 13:44:34 by mabdessm          #+#    #+#             */
-/*   Updated: 2024/05/08 14:31:23 by mabdessm         ###   ########.fr       */
+/*   Updated: 2024/05/08 17:02:27 by mabdessm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+static int	ft_printfpointer(unsigned long p)
+{
+	if (p)
+	{
+		ft_putstr("0x");
+		return (ft_putnbr_base_p(p, \
+		"0123456789abcdef") + 2);
+	}
+	else
+		return (ft_putstr("(nil)"));
+}
 
 static int	ft_printfpercent(char str_index, va_list args)
 {
@@ -23,17 +35,13 @@ static int	ft_printfpercent(char str_index, va_list args)
 	else if (str_index == 'u')
 		return (ft_putunsigned(va_arg(args, unsigned int)));
 	else if (str_index == 'x')
-		return (ft_putnbr_base(va_arg(args, unsigned long), \
+		return (ft_putnbr_base(va_arg(args, unsigned int), \
 		"0123456789abcdef"));
 	else if (str_index == 'X')
-		return (ft_putnbr_base(va_arg(args, unsigned long), \
+		return (ft_putnbr_base(va_arg(args, unsigned int), \
 		"0123456789ABCDEF"));
 	else if (str_index == 'p')
-	{
-		ft_putstr("0x");
-		return (ft_putnbr_base(va_arg(args, unsigned long), \
-		"0123456789abcdef") + 2);
-	}
+		return (ft_printfpointer(va_arg(args, unsigned long)));
 	else if (str_index == '%')
 		return (ft_putchar('%'));
 	return (0);
@@ -62,29 +70,3 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (len);
 }
-
-/*#include <stdio.h>
-
-int	main(void)
-{
-	int	i;
-	
-	i = 45;
-	printf(" len : %i\n", ft_putchar('A'));
-	printf(" len : %i\n", ft_putstr("ABCDEF"));
-	printf(" len : %i\n", ft_putnbr(-7664567));
-	printf(" len : %i\n", ft_putunsigned(3147487587));
-	printf(" len : %i\n", ft_putnbr_base(565678, "0123456789ABCDEF"));
-	printf(" len : %i\n", ft_putnbr_base(565678, "0123456789abcdef"));
-	ft_printf(" len : %i\n", ft_putchar('A'));
-	ft_printf(" len : %i\n", ft_putstr("ABCDEF"));
-	ft_printf(" len : %i\n", ft_putnbr(-7664567));
-	ft_printf(" len : %i\n", ft_putunsigned(3147487587));
-	ft_printf(" len : %i\n", ft_putnbr_base(565678, "0123456789ABCDEF"));
-	ft_printf(" len : %i\n", ft_putnbr_base(565678, "0123456789abcdef"));
-	if (ft_printf("YOO\n%s_%d_%i_%c_%u_%x_%X_%%_%p\nHOO\n",\
-		 "ABCD", i, -1245, 'B', 5678, 346578, 346578, &i) == \
-		 printf("YOO\n%s_%d_%i_%c_%u_%x_%X_%%_%p\nHOO\n", "ABCD", \
-		 i, -1245, 'B', 5678, 346578, 346578, &i))
-		ft_printf("YOOHOO");
-}*/
