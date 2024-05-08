@@ -6,7 +6,7 @@
 /*   By: mabdessm <mabdessm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 13:44:34 by mabdessm          #+#    #+#             */
-/*   Updated: 2024/05/08 17:02:27 by mabdessm         ###   ########.fr       */
+/*   Updated: 2024/05/08 17:33:16 by mabdessm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ static int	ft_printfpointer(unsigned long p)
 	if (p)
 	{
 		ft_putstr("0x");
-		return (ft_putnbr_base_p(p, \
-		"0123456789abcdef") + 2);
+		return (ft_putnbr_base_p(p, "0123456789abcdef") + 2);
 	}
 	else
 		return (ft_putstr("(nil)"));
