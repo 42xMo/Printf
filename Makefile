@@ -6,7 +6,7 @@
 #    By: mabdessm <mabdessm@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/06 12:50:33 by mabdessm          #+#    #+#              #
-#    Updated: 2024/05/08 17:34:05 by mabdessm         ###   ########.fr        #
+#    Updated: 2024/05/09 16:08:24 by mabdessm         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,4 +35,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all re clean fclean bonus
+.PHONY: all re clean fclean
